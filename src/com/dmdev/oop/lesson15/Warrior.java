@@ -1,6 +1,8 @@
 package com.dmdev.oop.lesson15;
 
-public class Warrior extends Hero {
+import com.dmdev.oop.lesson18.weapon.MeleeWeapon;
+
+public class Warrior<T extends MeleeWeapon> extends Hero<T> {
 
     public Warrior(String name, int damage) {
         super(name, damage);

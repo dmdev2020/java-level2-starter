@@ -1,9 +1,9 @@
 package com.dmdev.oop.lesson11;
 
 /**
- * Laptop <- Computer <- Object
+ * Mobile <- Laptop <- Computer <- Object
  */
-public class Laptop extends Computer {
+public final class Laptop extends Computer {
 
     private int weight;
 
@@ -22,6 +22,11 @@ public class Laptop extends Computer {
 
     public Laptop() {
         System.out.println("Constructor laptop");
+    }
+
+    @Override
+    public void load() {
+
     }
 
     public void open() {

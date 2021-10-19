@@ -1,6 +1,8 @@
 package com.dmdev.oop.lesson18;
 
-public class List<T> {
+import java.util.Iterator;
+
+public class List<T> implements Iterable<T> {
 
     private T[] objects;
     private int size;
@@ -19,5 +21,25 @@ public class List<T> {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ListIterator();
+    }
+
+    private class ListIterator implements Iterator<T> {
+
+        private int currentIndex;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < size;
+        }
+
+        @Override
+        public T next() {
+            return objects[currentIndex++];
+        }
     }
 }

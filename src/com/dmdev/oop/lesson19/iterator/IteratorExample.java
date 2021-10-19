@@ -1,7 +1,6 @@
 package com.dmdev.oop.lesson19.iterator;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class IteratorExample {
@@ -14,20 +13,12 @@ public class IteratorExample {
 //        for (int i = 0; i < list.size(); i++) {
 //            Integer integer = list.get(i);
 //        }
-//        for (Integer integer : list) {
-//            System.out.println(integer);
-//        }
-        for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext(); ) {
-            Integer next = iterator.next();
-            if (next == 3 || next == 4) {
-                iterator.remove();
-            }
+        for (Integer integer : list) {
+            System.out.println(integer);
         }
-        System.out.println(list);
-//        Iterator<Integer> iterator = list.iterator();
-//        while (iterator.hasNext()) {
-//            Integer next = iterator.next();
-//            System.out.println(next);
-//        }
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
+        list.forEach(System.out::println);
     }
 }

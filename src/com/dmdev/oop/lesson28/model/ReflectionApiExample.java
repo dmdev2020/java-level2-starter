@@ -9,7 +9,7 @@ import java.lang.reflect.Modifier;
 public class ReflectionApiExample {
 
     public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        User user = new User(25L, "Ivan");
+        User user = new User(25L, "Ivan", 24);
         testMethods(user);
 //        testFields(user);
 //        Class<? extends User> userClass = user.getClass();

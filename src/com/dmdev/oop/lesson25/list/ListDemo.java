@@ -9,6 +9,9 @@ public class ListDemo {
     public static void main(String[] args) throws InterruptedException {
         List<Integer> integers = Collections.synchronizedList(new ArrayList<>());
 
+        String value = "sdff";
+        String substring = value.substring(3);
+
         ListThread listThread1 = new ListThread(integers);
         ListThread listThread2 = new ListThread(integers);
         ListThread listThread3 = new ListThread(integers);
